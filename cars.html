@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8" />
+    <title>تصفح السيارات - AUTOCAR</title>
+    <link rel="stylesheet" href="style.css" />
+   
+    <script type="text/javascript" src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
+    <script type="text/javascript" src="myFunctions.js"></script>
+</head>
+<body>
+    <header>
+        <div class="nav-container">
+            <div class="logo-area">
+                <img src="autocar.png" alt="AUTOCAR Logo" />
+                <div class="logo-text"><h2>AUTOCAR</h2><span>لتأجير السيارات</span></div>
+            </div>
+            <div class="nav-links">
+                <a href="home.html">الرئيسية</a>
+                <a href="aboutus.html">من نحن</a>
+                <a href="cars.html">تصفح السيارات</a>
+            </div>
+        </div>
+    </header>
+    <main>
+    
+        <h1>السيارات المتوفرة للإيجار</h1>
+        <p>يمكنك مشاهدة تفاصيل كل سيارة بالضغط على الزر الموجود بجانبها، ثم اختيار سيارة واحدة لإتمام الحجز.</p>
+        <table>
+            <tr><th>اختيار</th><th>الصورة</th><th>اسم السيارة</th><th>سنة الصنع</th><th>التفاصيل</th></tr>
+            <tr><td><input type="checkbox" name="selected-car" /></td><td><img class="car-photo" src="https://commons.wikimedia.org/wiki/Special:FilePath/Toyota_Corolla_2017.jpg?width=320" alt="تويوتا كورولا 2017" /></td><td>تويوتا كورولا</td><td>2017</td><td><button type="button" class="show-details">إظهار / إخفاء</button><p class="details">سيارة سيدان، 5 مقاعد، مكيف، ناقل حركة أوتوماتيك،بنزين 91.</p></td></tr>
+            <tr><td><input type="checkbox" name="selected-car" /></td><td><img class="car-photo" src="https://commons.wikimedia.org/wiki/Special:FilePath/Toyota_Corolla_sedan.jpg?width=320" alt="تويوتا كورولا سيدان" /></td><td>تويوتا كورولا سيدان</td><td>2011</td><td><button type="button" class="show-details">إظهار / إخفاء</button><p class="details">سيارة اقتصادية، 5 مقاعد، مناسبة للتنقل اليومي،بنزين 91.</p></td></tr>
+            <tr><td><input type="checkbox" name="selected-car" /></td><td><img class="car-photo" src="https://commons.wikimedia.org/wiki/Special:FilePath/Toyota_Corolla_front_20090416.jpg?width=320" alt="تويوتا كورولا" /></td><td>تويوتا كورولا E12</td><td>2009</td><td><button type="button" class="show-details">إظهار / إخفاء</button><p class="details">سيارة مدمجة، 5 مقاعد، مكيف هواء،بنزين 91.</p></td></tr>
+            <tr><td><input type="checkbox" name="selected-car" /></td><td><img class="car-photo" src="https://commons.wikimedia.org/wiki/Special:FilePath/2014_Toyota_Corolla_S_(1.8,_CVT).jpg?width=320" alt="تويوتا كورولا 2014" /></td><td>تويوتا كورولا S</td><td>2014</td><td><button type="button" class="show-details">إظهار / إخفاء</button><p class="details">سيارة سيدان، 5 مقاعد، ناقل حركة أوتوماتيك،بنزين 91.</p></td></tr>
+            <tr><td><input type="checkbox" name="selected-car" /></td><td><img class="car-photo" src="https://commons.wikimedia.org/wiki/Special:FilePath/Toyota_Corolla_Hybrid_(E210)_IMG_4338.jpg?width=320" alt="تويوتا كورولا هايبرد" /></td><td>تويوتا كورولا هايبرد</td><td>2020</td><td><button type="button" class="show-details">إظهار / إخفاء</button><p class="details">سيارة هجينة، 5 مقاعد، موفرة للوقود،بنزين 91.</p></td></tr>
+        </table>
+        <div class="btn">
+          <button  type="button" id="proceedBtn" >متابعة </button>
+        </div>
+          <form id="bookingForm" action="#" method="post" >
+            <fieldset>
+                <legend>نموذج الحجز</legend>
+                <p><label for="fullName">الاسم الكامل:</label> <input type="text" id="fullName" /></p>
+                <p><label for="nationalId">الرقم الوطني:</label> <input type="text" id="nationalId" maxlength="11" /></p>
+                <p><label for="startDate">تاريخ البداية:</label> <input type="date" id="startDate" /></p>
+                <p><label for="endDate">تاريخ النهاية:</label> <input type="date" id="endDate" /></p>
+                <p><label for="mobile">رقم الموبايل:</label> <input type="text" id="mobile" maxlength="10" /></p>
+                <p><label for="email">البريد الإلكتروني:</label> <input type="text" id="email" /></p>
+                <p><input type="submit" value="إرسال الحجز" /> <input type="reset" value="مسح البيانات" /></p>
+                <p class="note">سعر التأجير الافتراضي: 250,000 ل.س لليوم. خصم 10% للحجز الذي يتجاوز 7 أيام.</p>
+            </fieldset>
+        </form>
+    </main>
+</body>
+</html>
